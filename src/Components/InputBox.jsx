@@ -1,6 +1,5 @@
-import React from 'react'
+import React,{useId} from 'react'
 
-fetch(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`)
 function InputBox({
     label,
     amount,
@@ -31,7 +30,7 @@ function InputBox({
                     value={amount}
                     onChange={(e)=>onAmountChange && onAmountChange(Number(e.target.value))}
                 />
-            </div>
+            </div> 
             <div className="w-1/2 flex flex-wrap justify-end text-right">
                 <p className="text-black/40 mb-2 w-full">Currency Type</p>
                 <select
